@@ -48,14 +48,14 @@ module.exports = (grunt)->
           use: ['nib']
           import: ['nib']
         files:
-          'public/style.css': 'stylesheets/**/*.styl'
+          './public/style.css': './stylesheets/index.styl'
       build:
         options:
           debug: no
           use: ['nib']
           import: ['nib']
         files:
-          'public/style.css': 'stylesheets/**/*.styl'
+          './public/style.css': './stylesheets/index.styl'
     docco:
       docs:
         src: ['node_modules/chalice-*/src/*.coffee']

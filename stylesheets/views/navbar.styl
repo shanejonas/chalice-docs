@@ -7,9 +7,9 @@ navbar-view()
     left: 0
     width: 100%
     position: fixed
-    min-height: 44px
-    overflow: hidden
+    // overflow: hidden
     z-index: 9999
+
     @media phone
       position: relative
 
@@ -19,7 +19,6 @@ navbar-view()
       height: 100%
 
       > a
-        min-height: 44px
         height: 100%
         column(2)
         @media phone
@@ -27,18 +26,35 @@ navbar-view()
 
   // styles
   .navbar-view
-    background: #6a598d
+    background: $secondary-colour
 
     nav
       border = solid gray 1px
+
       > a
         text-decoration: none
-        padding-top: 12px
+        padding: 18px
         text-align: center
-        font-weight: 500
+        font-weight: 600
+        line-height: 100%
         border-right: border
-        color: #fefeff
-        font-size: font-size
+        color: $white
+        transition: all 0.25s
+
+        // &:hover
+        //   transform: translateY(-100%)
+
+        // &:before
+        //   content: attr(data-title)
+        //   background: $gray
+        //   border: 1px solid red
+        //   position: absolute
+        //   width: 100%
+        //   height: 100%
+        //   display: block
+        //   top: 100%
+        //   left: 0
+
         @media phone
           border-right: none
           border-bottom: solid gray 1px
@@ -50,21 +66,3 @@ navbar-view()
 
       > a:hover
         background: gray
-
-// new-navbar-view(name, height=44px, font-size=12px)
-//   .navbar-view-{name}
-//     background: #6a598d
-// 
-//     nav
-//       > a
-//         text-align: center
-//         font-weight: 600
-//         border-right: solid gray 1px
-//         color: #fefeff
-//         font-size: font-size
-// 
-//       > a:first-child
-//         border-left: solid gray 1px
-// 
-//       > a:hover
-//         background: gray

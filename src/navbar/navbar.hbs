@@ -1,7 +1,7 @@
 <nav>
-  <a href="/" class="logo">C</a>
-  <a href="/" class="home">Getting Started</a>
+  <a href="/" class="logo" data-title="Chalice">Chalice</a>
+  <a href="/" class="home" data-title="Getting Started">Getting Started</a>
   {{#items}}
-    <a href="/{{slug}}" title="{{title}}">{{title}}</a>
+    <a href="/{{slug}}" data-title="{{title}}">{{title}}</a>
   {{/items}}
 </nav>

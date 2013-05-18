@@ -1,5 +1,6 @@
-## Chalice - The Holy Grail
-![logo-here](http://cloud.shanejon.as/image/3L3m1c052D2p/Screen%20Shot%202013-05-17%20at%2011.57.10%20PM.png)
+# Chalice - The Holy Grail
+
+<div class='hero'></div>
 
 Documentation Site for Chalice
 
