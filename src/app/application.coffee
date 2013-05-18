@@ -35,7 +35,7 @@ class Application extends Router
           title: 'View'
         ,
           slug: 'compositeview'
-          title: 'CompositeView'
+          title: 'Composite View'
         ,
           slug: 'client'
           title: 'Client'
@@ -45,6 +45,12 @@ class Application extends Router
       ]
     @appView.addView @getNavigationView()
     this
+
+  swap: ->
+    # scroll to top on desktop
+    if window?.innerWidth > 768
+      window.scrollTo 0, 0
+    super
 
   routes:
     '': 'gettingStarted'

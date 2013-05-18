@@ -1,43 +1,70 @@
 navbar-view()
+  // layout
   .navbar-view
+    row()
     backface-visibility: hidden
     top: 0
     left: 0
-    position: fixed
-    height: 44px
     width: 100%
+    position: fixed
+    min-height: 44px
     overflow: hidden
     z-index: 9999
+    @media phone
+      position: relative
+
+    nav
+      max-width: total-width
+      margin: 0 auto
+      height: 100%
+
+      > a
+        min-height: 44px
+        height: 100%
+        column(2)
+        @media phone
+          column(12)
+
+  // styles
+  .navbar-view
     background: #6a598d
 
     nav
-      display: flex
-      margin: 0 auto
-      height: 44px
+      border = solid gray 1px
+      > a
+        text-decoration: none
+        padding-top: 12px
+        text-align: center
+        font-weight: 500
+        border-right: border
+        color: #fefeff
+        font-size: font-size
+        @media phone
+          border-right: none
+          border-bottom: solid gray 1px
 
       > a:first-child
-        border-left: solid gray 1px
+        border-left: border
+        @media phone
+          border-top: none
 
       > a:hover
         background: gray
 
-      > a
-        border-right: solid gray 1px
-        padding-top: 15px
-        flex: 1
-        text-align: center
-        width: auto
-        color: #fefeff
-        font-weight: 600
-        text-decoration: none
-        display: inline-block
-        position: relative
-        // border: solid red 2px
-
-new-navbar-view(name, background=#422c4e, height=44px, font-size=12px)
-  .navbar-view-{name}
-    background: background
-
-    nav > a
-      color: #fefeff
-      font-size: font-size
+// new-navbar-view(name, height=44px, font-size=12px)
+//   .navbar-view-{name}
+//     background: #6a598d
+// 
+//     nav
+//       > a
+//         text-align: center
+//         font-weight: 600
+//         border-right: solid gray 1px
+//         color: #fefeff
+//         font-size: font-size
+// 
+//       > a:first-child
+//         border-left: solid gray 1px
+// 
+//       > a:hover
+//         background: gray

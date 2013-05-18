@@ -1,8 +1,9 @@
-# chalice-docs
+## Chalice - The Holy Grail
+![logo-here](http://cloud.shanejon.as/image/3L3m1c052D2p/Screen%20Shot%202013-05-17%20at%2011.57.10%20PM.png)
 
 Documentation Site for Chalice
 
-## Getting Started
+##### Quick Start:
 You need `node` installed first. After that you can run:
 ```
   npm install -g grunt-cli
@@ -13,7 +14,7 @@ You need `node` installed first. After that you can run:
 
 ---
 
-## Chalice - The Holy Grail
+## Getting Started
 
 ### What is the holy grail of web development?
 I'm sure everyone has a different view but heres mine:
@@ -104,42 +105,21 @@ string, and on the client side it will return `this` as usual.
 
 
 ## Styles
-By following some conventions and using stylus we can create some really 
-powerful mixins for our views:
+[semantic.gs](http://semantic.gs) is used as well as media queries to
+get some pretty nice syntax for layout:
 
-        // set base max-width (on desktop) for the app
-        max-width = 800px
-
-        @import 'views/view'
-        @import 'views/composite'
-        @import 'views/navbar'
-        @import 'views/composite'
-        @import 'reset'
-        @import 'misc'
-
-        // device media queries
-        tablet = "(min-width: 768px) and (max-width: 979px)"
-        phone = "(max-width: 767px)"
-
-        // base view mixins
-        navbar-view()
-        view()
-        composite-view()
+    // device media queries
+    tablet = "(min-width: 768px) and (max-width: 979px)"
+    phone = "(max-width: 767px)"
 
 
-and here is how the `view` and `new-view` `mixins` are defined:
-
-        view()
-          .view
-            margin: 0 auto
-            max-width: max-width
-          @media tablet
-            .view
-              max-width: (max-width / 1.5)
-
-          @media phone
-            .view
-              max-width: (max-width / 3)
+    // layout
+    .navbar-view
+      row()
+      nav > a
+        column(2)
+        @media phone
+          column(12)
 
 ---
 
