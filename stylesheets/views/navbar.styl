@@ -1,0 +1,43 @@
+navbar-view()
+  .navbar-view
+    backface-visibility: hidden
+    top: 0
+    left: 0
+    position: fixed
+    height: 44px
+    width: 100%
+    overflow: hidden
+    z-index: 9999
+    background: #6a598d
+
+    nav
+      display: flex
+      margin: 0 auto
+      height: 44px
+
+      > a:first-child
+        border-left: solid gray 1px
+
+      > a:hover
+        background: gray
+
+      > a
+        border-right: solid gray 1px
+        padding-top: 15px
+        flex: 1
+        text-align: center
+        width: auto
+        color: #fefeff
+        font-weight: 600
+        text-decoration: none
+        display: inline-block
+        position: relative
+        // border: solid red 2px
+
+new-navbar-view(name, background=#422c4e, height=44px, font-size=12px)
+  .navbar-view-{name}
+    background: background
+
+    nav > a
+      color: #fefeff
+      font-size: font-size

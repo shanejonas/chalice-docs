@@ -1,0 +1,12 @@
+<!-- Docco [section list] -->
+<div class="container">
+  <ul class="sections">  
+      <% for (var i=0, l=sections.length; i<l; i++) { %>
+      <% var section = sections[i]; %>
+      <li class="section-<%= i %>">
+          <span class="docs"><%= section.docsText %></span>
+          <span class="code"><%= section.codeHtml %></span>
+      </li>
+      <% } %>
+  </ul>
+</div>

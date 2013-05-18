@@ -1,0 +1,57 @@
+{
+  "name": "chalice-docs",
+  "description": "Documentation Site for Chalice",
+  "version": "0.0.1",
+  "homepage": "chalice.io",
+  "author": {
+    "name": "Shane Jonas",
+    "email": "jonas.shane@gmail.com",
+    "url": "shanejon.as"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shanejonas/chalice-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shanejonas/chalice-docs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "chalice.io/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "backbone": "~0.9.10",
+    "underscore": "~1.4.4",
+    "express": "~3.1.0",
+    "connect": "~2.7.3",
+    "chalice-server": "0.0.5",
+    "chalice-compositeview": "0.0.3",
+    "chalice-view": "0.0.4",
+    "chalice-client": "0.0.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-devtools": "~0.1.0-7",
+    "grunt-browserify2": "~0.1.6",
+    "grunt-contrib-coffee": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-stylus": "~0.5.0",
+    "handleify": "git://github.com/shanejonas/node-handleify.git#master",
+    "coffeeify": "0.3.0",
+    "should": "~1.2.2",
+    "mocha": "~1.8.2",
+    "uglify-js2": "~2.1.11",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-regarde": "~0.1.1",
+    "browserify-shim": "~2.0.3",
+    "grunt-markdown": "~0.2.0",
+    "grunt-docco": "~0.2.0"
+  },
+  "keywords": []
+}
