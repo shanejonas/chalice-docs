@@ -8,8 +8,10 @@ You need `node` installed first. After that you can run:
 ```
   npm install -g grunt-cli
   npm install
+  sudo easy_install-2.7 Pygments
   grunt
   open http://localhost:3000
+
 ```
 
 ---
