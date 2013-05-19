@@ -53,9 +53,6 @@ html, body
   width: 100%
   max-width: 100%
 
-  height: 100%
-  min-height: 100%
-
 // Prevent modern browsers from displaying `audio` without controls.
 // Remove excess height in iOS 5 devices.
 audio:not([controls])
@@ -139,6 +136,7 @@ sub
 // 3. Improves image quality when scaled in IE7. It is on by default in IE8 and is not implemented in IE6.
 // 4. Make block level to inherit margins
 img
+  max-width: 100%
   border: 0 // 1
   vertical-align: middle // 2
     -ms-interpolation-mode: bicubic // 3

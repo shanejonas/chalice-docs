@@ -14,6 +14,7 @@ navbar-view()
       position: relative
 
     nav
+      clearfix()
       max-width: total-width
       margin: 0 auto
       height: 100%
@@ -22,6 +23,7 @@ navbar-view()
         height: 100%
         column(2)
         @media phone
+          height: 44px
           column(12)
 
   // styles
@@ -41,20 +43,6 @@ navbar-view()
         color: $white
         transition: all 0.25s
 
-        // &:hover
-        //   transform: translateY(-100%)
-
-        // &:before
-        //   content: attr(data-title)
-        //   background: $gray
-        //   border: 1px solid red
-        //   position: absolute
-        //   width: 100%
-        //   height: 100%
-        //   display: block
-        //   top: 100%
-        //   left: 0
-
         @media phone
           border-right: none
           border-bottom: solid gray 1px
@@ -63,6 +51,9 @@ navbar-view()
         border-left: border
         @media phone
           border-top: none
+
+      > a:active
+        background: gray
 
       > a:hover
         background: gray
