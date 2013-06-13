@@ -9,8 +9,8 @@ module.exports = (grunt)->
   @initConfig
     regarde:
       styles:
-        files: ['stylesheets/**/*']
-        tasks: ['clean:styles', 'stylus:dev', 'livereload']
+        files: ['./public/stylesheets/**/*']
+        tasks: ['clean:styles', 'livereload']
       app:
         files: ['src/**/*']
         tasks: ['clean:build', 'browserify2:dev', 'express:app', 'livereload']
@@ -41,27 +41,6 @@ module.exports = (grunt)->
         afterHook: (src)->
           result = uglify.minify src, fromString: true
           result.code
-    stylus:
-      dev:
-        options:
-          debug: yes
-          use: ['nib']
-          import: ['nib']
-        files:
-          './public/style.css': './stylesheets/index.styl'
-      build:
-        options:
-          debug: no
-          use: ['nib']
-          import: ['nib']
-        files:
-          './public/style.css': './stylesheets/index.styl'
-    docco:
-      docs:
-        src: ['node_modules/chalice-*/src/*.coffee']
-        options:
-          template: './resources/docco-template.jst'
-          output: 'src/pages'
     watch:
       scripts:
         files: ['**/*.coffee'],
@@ -74,9 +53,8 @@ module.exports = (grunt)->
   @loadNpmTasks 'grunt-regarde'
   @loadNpmTasks 'grunt-devtools'
   @loadNpmTasks 'grunt-markdown'
-  @loadNpmTasks 'grunt-docco'
   @loadTasks 'tasks'
 
-  @registerTask 'default', ['clean', 'stylus:dev', 'docco', 'markdown', 'browserify2:dev', 'express:app', 'livereload-start', 'regarde']
-  @registerTask 'build', ['clean', 'docco', 'markdown', 'stylus:build', 'browserify2:build']
+  @registerTask 'default', ['clean', 'markdown', 'browserify2:dev', 'express:app', 'livereload-start', 'regarde']
+  @registerTask 'build', ['clean', 'markdown', 'browserify2:build']
   @registerTask 'serve', ['express:app', 'express-keepalive']

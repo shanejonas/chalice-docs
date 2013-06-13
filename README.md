@@ -19,6 +19,9 @@ You need `node` installed first. After that you can run:
 
 ## Getting Started
 
+### Known Issues
+If you run into issues with a server process run `$ kill node` (autocomplete the `node` to have the system find the current working process)
+
 ### What is the holy grail of web development?
 I'm sure everyone has a different view but heres mine:
 

@@ -7,10 +7,10 @@ CompositeView = require 'chalice-compositeview'
 View = require 'chalice-view'
 Router = require 'chalice-client'
 
-clientTemplate = require '../pages/client.html'
-compositeTemplate = require '../pages/composite.html'
-serverTemplate = require '../pages/server.html'
-viewTemplate = require '../pages/view.html'
+# clientTemplate = require '../pages/client.html'
+# compositeTemplate = require '../pages/composite.html'
+# serverTemplate = require '../pages/server.html'
+# viewTemplate = require '../pages/view.html'
 startTemplate = require '../pages/readme.html'
 
 class Application extends Router
