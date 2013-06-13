@@ -22,6 +22,7 @@ module.exports = (grunt)->
       styles: ['public/style.css']
     markdown:
       readme:
+        template: './resources/markdown.jst'
         files: ['./README.md']
         dest: './src/pages'
     browserify2:

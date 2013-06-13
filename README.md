@@ -44,7 +44,7 @@ for debugging in chrome dev tools.
 
 ### Thin Libraries
 This documentation site and the libraries (backbone + chalice + handlebars + zepto) are only 29kb gzip/compressed.
-![thin-libraries](http://f.cl.ly/items/0Q292M0K1x153N2a2M2B/Screen%20Shot%202013-04-02%20at%2011.27.18%20PM.png)
+![thin-libraries](/images/network.png)
 
 ### String Concatenation and Dom Creation Speed
 Dom creation libraries are getting [faster](http://jsperf.com/dom-creation-libs). But the clear winner is still concatenating strings. This also makes it easier to work with views on the server.
@@ -140,7 +140,7 @@ that will selectively rebuild and livereload in the browser when `.coffee` or
 - `grunt clean` - Clean files and folders.
 - `grunt devtools` - A GUI For grunt in chrome devtools
 
-![grunt-devtools](http://cloud.shanejon.as/image/3s0l2X3J0I1f/Screen%20Shot%202013-03-31%20at%2011.00.08%20PM.png)
+![grunt-devtools](/images/gruntdevtools.png)
 
 ### Generators
 You can use the following grunt tasks to generate new views/models/routers:
